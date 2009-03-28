@@ -1,4 +1,4 @@
-package com.goodworkalan.tuple.ordered;
+package com.mallardsoft.tuple.ordered;
 
 import com.mallardsoft.tuple.End;
 

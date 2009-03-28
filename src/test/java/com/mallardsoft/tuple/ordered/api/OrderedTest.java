@@ -1,4 +1,4 @@
-package com.goodworkalan.tuple.ordered.api;
+package com.mallardsoft.tuple.ordered.api;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertFalse;
@@ -9,9 +9,9 @@ import java.util.TreeSet;
 
 import org.testng.annotations.Test;
 
-import com.goodworkalan.tuple.ordered.Ordered;
 import com.mallardsoft.tuple.Pair;
 import com.mallardsoft.tuple.Tuple;
+import com.mallardsoft.tuple.ordered.Ordered;
 
 public class OrderedTest
 {

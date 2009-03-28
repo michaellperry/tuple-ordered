@@ -1,4 +1,4 @@
-package com.goodworkalan.tuple.ordered;
+package com.mallardsoft.tuple.ordered;
 
 /**
  * Create an implementation of comparable that will compare an object against

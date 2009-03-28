@@ -3,7 +3,7 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.goodworkalan</groupId>
+    <groupId>com.mallardsoft</groupId>
     <artifactId>tuple-ordered</artifactId>
     <packaging>jar</packaging>
     <version>0.1.X</version>
@@ -12,8 +12,8 @@
     <description>An implementation the Comparable interface for Java Tuple.</description>
 
     <organization>
-        <name>Alan Gutierrez</name>
-        <url>http://blogometer.com/</url>
+        <name>Mallardsoft</name>
+        <url>http://mallardsoft.com/</url>
     </organization>
 
     <licenses>

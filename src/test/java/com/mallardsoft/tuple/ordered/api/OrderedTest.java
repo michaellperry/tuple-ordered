@@ -1,16 +1,18 @@
 package com.mallardsoft.tuple.ordered.api;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertFalse;
-import static org.testng.Assert.assertTrue;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.util.Iterator;
 import java.util.TreeSet;
 
-import org.testng.annotations.Test;
+import org.junit.Test;
 
+import com.mallardsoft.tuple.End;
 import com.mallardsoft.tuple.Pair;
 import com.mallardsoft.tuple.Tuple;
+import com.mallardsoft.tuple.Version;
 import com.mallardsoft.tuple.ordered.Ordered;
 
 public class OrderedTest
@@ -109,5 +111,23 @@ public class OrderedTest
     public void decuple()
     {
         assertEquals(Ordered.order(Tuple.from(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)).compareTo(Ordered.order(Tuple.from(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))), 0);
+    }
+    
+    @Test
+    public void testVersion() {
+        Version v1 = new Version(2,0,2,3425);
+        Version v2 = new Version(2,1,0,241);
+        
+        assertTrue("Version 2.1.0.241 > 2.0.2.3425", Ordered.order(v2).compareTo(Ordered.order(v1)) > 0);
+    }
+    
+    @Test
+    public void testCompareNonNamedTuple() {
+    	// Smith, Larry Lee
+    	Tuple<String, Tuple<String, Tuple<String, End>>> larry = Tuple.from("Lee").prepend("Larry").prepend("Smith");
+    	// Smith, Cathy Lynn
+    	Tuple<String, Tuple<String, Tuple<String, End>>> cathy = Tuple.from("Lynn").prepend("Cathy").prepend("Smith");
+    	
+    	assertTrue("Cathy comes before Larry.", Ordered.order(cathy).compareTo(Ordered.order(larry)) < 0);
     }
 }

@@ -38,7 +38,7 @@ public class Ordered<T extends Tuple<?, ?>> implements Comparable<Ordered<T>>
      * @param comparable
      *            A comparable for the object.
      */
-    public Ordered(T object, Comparable<? super T> comparable)
+    private Ordered(T object, Comparable<? super T> comparable)
     {
         this.tuple = object;
         this.comparable = comparable;
